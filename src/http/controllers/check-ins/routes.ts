@@ -10,8 +10,8 @@ import { metricts } from './metrics';
 export async function checkInsRoutes(app: FastifyInstance) {
   app.addHook('onRequest', verifyJWT);
 
-  app.get('check-ins/history', history);
-  app.get('cehck-ins/metrics', metricts);
+  app.get('/check-ins/history', history);
+  app.get('/cehck-ins/metrics', metricts);
 
   app.post('/gyms/:gymId/check-ins', create);
   app.patch('/check-ins/:checkInId/validate', validate);
