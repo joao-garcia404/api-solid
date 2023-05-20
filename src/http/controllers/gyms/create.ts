@@ -22,7 +22,11 @@ export async function create(request: FastifyRequest, reply: FastifyReply) {
   const createGymUseCase = makeCreateGymUseCase();
 
   await createGymUseCase.execute({
-    title, description, phone, latitude, longitude
+    title,
+    description,
+    phone,
+    latitude,
+    longitude
   });
 
   return reply.status(201).send();
