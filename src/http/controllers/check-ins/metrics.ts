@@ -9,5 +9,5 @@ export async function metricts(request: FastifyRequest, reply: FastifyReply) {
     userId: request.user.sub,
   });
 
-  return reply.status(201).send({ checkInsCount });
+  return reply.status(200).send({ checkInsCount });
 }
